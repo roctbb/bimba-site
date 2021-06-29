@@ -1,3 +1,5 @@
+import random
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -13,5 +15,11 @@ def ukr_bimba():
 @app.route("/rus")
 def rus_bimba():
     return "Это русска бимба"
+
+@app.route("/dollar")
+def dollar():
+    price = random.randint(35, 120)
+    # return "Сегодня курс доллара - {} рублей.".format(price)
+    return render_template('dollar.html', price=price)
 
 app.run(host="0.0.0.0", port=8000, debug=True)

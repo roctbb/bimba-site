@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс доллара</title>
+</head>
+<body>
+
+<h3 style="text-align: center">Курс доллара</h3>
+{% if price < 70 %}
+<p style="text-align: center;"><img width="250px" src="https://myfin.by/source/thumb_440_880/1/1409563964money_PNG3520.png"></p>
+{% else %}
+<p style="text-align: center;"><img width="250px" src="https://bcoll.ru/wp-content/uploads/2019/08/3-dollara-kupyura_15.png"></p>
+{% endif %}
+
+<p style="text-align: center;"><strong style="font-size: 50px;">{{ price }} руб.</strong></p>
+
+
+<p style="text-align: center; max-width: 60%;margin: auto auto;">{% for i in range(price) %}🪙{% endfor %}</p>
+
+
+
+</body>
+</html>
