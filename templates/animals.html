@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Животные</title>
+</head>
+<body>
+<h1>Животные</h1>
+<ul>
+    <li><a href="/animals?type=cat">Кот</a></li>
+    <li><a href="/animals?type=dog">Собака</a></li>
+</ul>
+
+{% if animal == "cat" %}
+    <img width="300px" src="https://cdn1.ozone.ru/s3/multimedia-v/wc1200/6059265463.jpg" />
+{% endif %}
+</body>
+</html>
