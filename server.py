@@ -29,4 +29,16 @@ def animals():
 
     return render_template('animals.html', animal=animal)
 
+@app.route('/calc')
+def calc():
+    A = request.args.get('a')
+    B = request.args.get('b')
+
+    if A != None:
+        A = int(A)
+    if B != None:
+        B = int(B)
+
+    return render_template('calc.html', A=A, B=B)
+
 app.run(host="0.0.0.0", port=8000, debug=True)

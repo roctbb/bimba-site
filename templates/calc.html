@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if A != None and B != None %}
+<strong>Результат: </strong>{{ A }} * {{ B }} = {{ A * B }}
+{% endif %}
+
+<form>
+    <input type="number" name="a"> * <input type="number" name="b">
+    <input type="submit" value="Посчитать" />
+</form>
+
+</body>
+</html>
